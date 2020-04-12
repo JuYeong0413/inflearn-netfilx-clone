@@ -1,6 +1,6 @@
-# netflix_clone
+# inflearn-netfilx-clone
 
-A new Flutter project.
+넷플릭스 클론 프로젝트
 
 ## Getting Started
 
