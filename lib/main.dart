@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/screen/home_screen.dart';
+import 'package:netflix_clone/screen/more_screen.dart';
 import 'package:netflix_clone/widget/bottom_bar.dart';
 
 void main() => runApp(MyApp());
@@ -15,10 +16,9 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Netflix',
       theme: ThemeData(
-        brightness: Brightness.dark,
-        primaryColor: Colors.black,
-        accentColor: Colors.white
-      ),
+          brightness: Brightness.dark,
+          primaryColor: Colors.black,
+          accentColor: Colors.white),
       home: DefaultTabController(
         length: 4,
         child: Scaffold(
@@ -26,9 +26,13 @@ class _MyAppState extends State<MyApp> {
             physics: NeverScrollableScrollPhysics(),
             children: <Widget>[
               HomeScreen(),
-              Container(child: Center(child: Text('search')),),
-              Container(child: Center(child: Text('save')),),
-              Container(child: Center(child: Text('more')),),
+              Container(
+                child: Center(child: Text('search')),
+              ),
+              Container(
+                child: Center(child: Text('save')),
+              ),
+              MoreScreen(),
             ],
           ),
           bottomNavigationBar: Bottom(),
